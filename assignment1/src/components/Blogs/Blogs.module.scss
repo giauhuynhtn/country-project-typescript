@@ -1,0 +1,116 @@
+.wrapper {
+    display: flex;
+    position: relative;
+    top: 100px;
+    max-width: 1200px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    .heading {
+        color: rgb(218, 88, 27);
+        font-size: 32px;
+        text-align: center;
+        padding: 14px 0;
+    }
+
+    .blog-item {
+        display: flex;
+        margin: 20px;
+
+        &:hover {
+            border: 2px solid rgba(221, 46, 46, 0.5);
+        }
+
+        .blog-heading {
+            margin-top: 20px;
+        }
+
+        .blog-img {
+            width: 220px;
+            margin: 20px 40px 20px 0;
+        }
+
+        .blog-content {
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+
+            .date {
+                font-weight: 550;
+            }
+
+            .item-content {
+                text-align: justify;
+                margin-top: 20px;
+            }
+        }
+
+        .wrapper-btn {
+            margin-top: 8px;
+            min-width: 100px;
+            padding: 2px 16px;
+
+            .item-btn {
+                padding: 6px 22px;
+                border-radius: 4px;
+                font-size: 1.6rem;
+                font-weight: 600;
+                background-color: white;
+                color: rgb(221, 46, 46);
+                border: 1px solid rgb(232, 104, 6);
+
+                &:hover {
+                    background-color: rgb(221, 46, 46);
+                    border-color: var(--primary-color);
+                }
+            }
+        }
+    }
+}
+
+// responsive
+
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    .wrapper {
+        max-width: 1020px;
+    }
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .wrapper {
+        max-width: 1020px;
+        min-width: 740px;
+        top: 450px;
+    }
+}
+/* Mobile */
+
+@media (max-width: 739px) {
+    .wrapper {
+        max-width: 739px;
+        top: 740px;
+
+        .blog-item {
+            .blog-img {
+                display: none;
+            }
+
+            .blog-content {
+                // margin: auto;
+                align-items: center;
+                max-width: 480px;
+
+                .item-content {
+                    padding: 0 20px;
+                }
+
+                .wrapper-btn {
+                    padding: 8px 16px;
+                }
+            }
+        }
+    }
+}
